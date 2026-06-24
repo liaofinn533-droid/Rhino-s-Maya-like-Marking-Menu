@@ -31,35 +31,27 @@ SPAN = 60  # 每个扇区覆盖角度
 
 
 class MarkingMenuWindow(forms.Form):
-    """标记菜单主窗口（透明无边框，靠拖拽选择工具）"""
-
     def __init__(self):
-        # 必须调用基类初始化，否则窗口句柄为空
-        super().__init__()
-
-        # 窗口外观
-        self.WindowStyle = forms.WindowStyle.NONE
+        forms.Form.__init__(self)
+        self.WindowStyle = forms.WindowStyle.None
         self.Size = drawing.Size(WINDOW_SIZE, WINDOW_SIZE)
         self.BackgroundColor = drawing.Colors.Transparent
         self.Topmost = True
 
-        # 拖拽状态
-        self.drag_start = None                # 鼠标按下点
+        self.drag_start = None
         self.current_mouse = drawing.PointF(HALF_SIZE, HALF_SIZE)
-        self.highlighted_index = -1           # 当前高亮扇区索引
+        self.highlighted_index = -1
 
-        # 绘制画布
-        canvas = forms.Drawable()
-        canvas.Paint += self.on_paint
+        # 使用 Drawable 控件承载绘制内容（Eto Form.Paint 不可靠）
+        self.canvas = forms.Drawable()
+        self.canvas.Paint += self.on_paint
+        self.Content = self.canvas
 
-        # 事件绑定
-        self.KeyDown += self.on_key_down
-        self.MouseDown += self.on_mouse_down
-        self.MouseMove += self.on_mouse_move
-        self.MouseUp += self.on_mouse_up
+        self.canvas.KeyDown += self.on_key_down
+        self.canvas.MouseDown += self.on_mouse_down
+        self.canvas.MouseMove += self.on_mouse_move
+        self.canvas.MouseUp += self.on_mouse_up
         self.LostFocus += self.on_lost_focus   # 失焦自动关闭
-
-        self.Content = canvas
 
     # ---- 绘制 ----
     def on_paint(self, sender, e):
@@ -101,7 +93,7 @@ class MarkingMenuWindow(forms.Form):
                       inner_radius * 2, inner_radius * 2)
 
         # 4. 工具符号（彩色 Unicode 图标，代替文字）
-        symbol_font = drawing.Fonts.Sans(26)
+        symbol_font = drawing.Font("Arial", 26)
         text_radius = (inner_radius + outer_radius) // 2   # 图标放在环中间
 
         for name, start_math, symbol, color in SECTORS:
@@ -169,7 +161,7 @@ class MarkingMenuWindow(forms.Form):
 
     def on_mouse_up(self, sender, e):
         """鼠标左键松开：执行对应的工具栏命令"""
-        if self.drag_start is None or e.Buttons != forms.MouseButtons.Primary:
+        if self.drag_start is None:
             return
 
         # 获取选中的工具名
@@ -190,17 +182,11 @@ class MarkingMenuWindow(forms.Form):
             print("[ACTION] 未识别扇区，取消")
             return
 
-        # 弹出对应工具栏
-        cmd_map = {
-            "Point":     "! _PopupToolbar \"Point\"",
-            "Lines":     "! _PopupToolbar \"Lines\"",
-            "Curve":     "! _PopupToolbar \"Curve\"",
-            "Arc":       "! _PopupToolbar \"Arc\"",
-            "Rectangle": "! _PopupToolbar \"Rectangle\"",
-            "Circle":    "! _PopupToolbar \"Circle\"",
-        }
-        if selected in cmd_map:
-            rs.Command(cmd_map[selected])
+        # 弹出对应工具栏（工具栏名与扇区名一致，从 SECTORS 自动派生）
+        try:
+            rs.Command('! _PopupToolbar "{}"'.format(selected))
+        except:
+            print("[ERROR] 无法弹出工具栏: {}".format(selected))
 
 
 def run_menu():
