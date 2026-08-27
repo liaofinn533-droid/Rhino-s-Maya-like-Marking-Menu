@@ -1,0 +1,323 @@
+{
+    "menu_size":  460,
+    "min_drag":  20,
+    "groups":  [
+                   {
+                       "name":  "曲线",
+                       "color":  "#E86496FA",
+                       "default_command":  "Curve",
+                       "tooltip":  "曲线（默认控制点曲线）",
+                       "tools":  [
+                                     {
+                                         "name":  "控制点曲线",
+                                         "command":  "Curve",
+                                         "tooltip":  "控制点曲线 Curve"
+                                     },
+                                     {
+                                         "name":  "直线",
+                                         "command":  "Line",
+                                         "tooltip":  "直线 Line"
+                                     },
+                                     {
+                                         "name":  "圆弧",
+                                         "command":  "Arc",
+                                         "tooltip":  "圆弧 Arc"
+                                     },
+                                     {
+                                         "name":  "椭圆",
+                                         "command":  "Ellipse",
+                                         "tooltip":  "椭圆 Ellipse"
+                                     },
+                                     {
+                                         "name":  "多边形",
+                                         "command":  "Polygon",
+                                         "tooltip":  "多边形 Polygon"
+                                     },
+                                     {
+                                         "name":  "螺旋线",
+                                         "command":  "Helix",
+                                         "tooltip":  "螺旋线 Helix"
+                                     }
+                                 ]
+                   },
+                   {
+                       "name":  "圆",
+                       "color":  "#E84AC26C",
+                       "default_command":  "Circle",
+                       "tooltip":  "圆（默认圆心半径）",
+                       "tools":  [
+                                     {
+                                         "name":  "圆",
+                                         "command":  "Circle",
+                                         "tooltip":  "圆 Circle"
+                                     },
+                                     {
+                                         "name":  "三点圆",
+                                         "command":  "Circle _3Point",
+                                         "tooltip":  "三点画圆 Circle _3Point"
+                                     },
+                                     {
+                                         "name":  "直径圆",
+                                         "command":  "Circle _Diameter",
+                                         "tooltip":  "直径画圆 Circle _Diameter"
+                                     },
+                                     {
+                                         "name":  "相切圆",
+                                         "command":  "Circle _Tangent _Pause _Pause _Radius",
+                                         "tooltip":  "相切相切半径（Tangent Tangent Radius）"
+                                     }
+                                 ]
+                   },
+                   {
+                       "name":  "曲线工具",
+                       "color":  "#E8F0A54A",
+                       "default_command":  "Offset",
+                       "tooltip":  "曲线工具（默认偏移）",
+                       "tools":  [
+                                     {
+                                         "name":  "偏移",
+                                         "command":  "Offset",
+                                         "tooltip":  "偏移 Offset"
+                                     },
+                                     {
+                                         "name":  "延伸",
+                                         "command":  "Extend",
+                                         "tooltip":  "延伸 Extend"
+                                     },
+                                     {
+                                         "name":  "圆角",
+                                         "command":  "Fillet",
+                                         "tooltip":  "曲线圆角 Fillet"
+                                     },
+                                     {
+                                         "name":  "斜角",
+                                         "command":  "Chamfer",
+                                         "tooltip":  "曲线斜角 Chamfer"
+                                     },
+                                     {
+                                         "name":  "重建",
+                                         "command":  "Rebuild",
+                                         "tooltip":  "重建 Rebuild"
+                                     },
+                                     {
+                                         "name":  "反转",
+                                         "command":  "Flip",
+                                         "tooltip":  "反转方向 Flip"
+                                     }
+                                 ]
+                   },
+                   {
+                       "name":  "矩形",
+                       "color":  "#E8E06C6C",
+                       "default_command":  "Rectangle",
+                       "tooltip":  "矩形（默认矩形）",
+                       "tools":  [
+                                     {
+                                         "name":  "矩形",
+                                         "command":  "Rectangle",
+                                         "tooltip":  "矩形 Rectangle"
+                                     },
+                                     {
+                                         "name":  "圆角矩形",
+                                         "command":  "Rectangle _Rounded",
+                                         "tooltip":  "圆角矩形 Rectangle _Rounded"
+                                     },
+                                     {
+                                         "name":  "三点矩形",
+                                         "command":  "Rectangle _3Point",
+                                         "tooltip":  "三点矩形 Rectangle _3Point"
+                                     },
+                                     {
+                                         "name":  "中心矩形",
+                                         "command":  "Rectangle _Center",
+                                         "tooltip":  "中心矩形 Rectangle _Center"
+                                     }
+                                 ]
+                   },
+                   {
+                       "name":  "建立曲面",
+                       "color":  "#E8A06CD8",
+                       "default_command":  "Loft",
+                       "tooltip":  "建立曲面（默认放样）",
+                       "tools":  [
+                                     {
+                                         "name":  "放样",
+                                         "command":  "Loft",
+                                         "tooltip":  "放样 Loft"
+                                     },
+                                     {
+                                         "name":  "旋转",
+                                         "command":  "Revolve",
+                                         "tooltip":  "旋转 Revolve"
+                                     },
+                                     {
+                                         "name":  "单轨扫掠",
+                                         "command":  "Sweep1",
+                                         "tooltip":  "单轨扫掠 Sweep1"
+                                     },
+                                     {
+                                         "name":  "双轨扫掠",
+                                         "command":  "Sweep2",
+                                         "tooltip":  "双轨扫掠 Sweep2"
+                                     },
+                                     {
+                                         "name":  "嵌面",
+                                         "command":  "Patch",
+                                         "tooltip":  "嵌面 Patch"
+                                     },
+                                     {
+                                         "name":  "挤出",
+                                         "command":  "ExtrudeCrv",
+                                         "tooltip":  "挤出曲线 ExtrudeCrv"
+                                     }
+                                 ]
+                   },
+                   {
+                       "name":  "曲面工具",
+                       "color":  "#E86CA8D8",
+                       "default_command":  "BlendSrf",
+                       "tooltip":  "曲面工具（默认混接曲面）",
+                       "tools":  [
+                                     {
+                                         "name":  "混接曲面",
+                                         "command":  "BlendSrf",
+                                         "tooltip":  "混接曲面 BlendSrf"
+                                     },
+                                     {
+                                         "name":  "偏移曲面",
+                                         "command":  "OffsetSrf",
+                                         "tooltip":  "偏移曲面 OffsetSrf"
+                                     },
+                                     {
+                                         "name":  "延伸曲面",
+                                         "command":  "ExtendSrf",
+                                         "tooltip":  "延伸曲面 ExtendSrf"
+                                     },
+                                     {
+                                         "name":  "边缘圆角",
+                                         "command":  "FilletEdge",
+                                         "tooltip":  "边缘圆角 FilletEdge"
+                                     },
+                                     {
+                                         "name":  "边倒角",
+                                         "command":  "ChamferEdge",
+                                         "tooltip":  "边倒角 ChamferEdge"
+                                     },
+                                     {
+                                         "name":  "抽壳",
+                                         "command":  "Shell",
+                                         "tooltip":  "抽壳 Shell"
+                                     }
+                                 ]
+                   },
+                   {
+                       "name":  "从物件建",
+                       "color":  "#E8D86CA8",
+                       "default_command":  "PlanarSrf",
+                       "tooltip":  "从物件建立曲面（默认平面曲线成面）",
+                       "tools":  [
+                                     {
+                                         "name":  "平面成面",
+                                         "command":  "PlanarSrf",
+                                         "tooltip":  "平面曲线成面 PlanarSrf"
+                                     },
+                                     {
+                                         "name":  "挤出",
+                                         "command":  "ExtrudeCrv",
+                                         "tooltip":  "挤出曲线 ExtrudeCrv"
+                                     },
+                                     {
+                                         "name":  "放样",
+                                         "command":  "Loft",
+                                         "tooltip":  "放样 Loft"
+                                     },
+                                     {
+                                         "name":  "从网格建面",
+                                         "command":  "MeshToNurb",
+                                         "tooltip":  "从网格建立曲面 MeshToNurb"
+                                     },
+                                     {
+                                         "name":  "抽离曲面",
+                                         "command":  "ExtractSrf",
+                                         "tooltip":  "抽离曲面 ExtractSrf"
+                                     }
+                                 ]
+                   },
+                   {
+                       "name":  "实体工具",
+                       "color":  "#E86CD8C2",
+                       "default_command":  "BooleanUnion",
+                       "tooltip":  "实体工具（默认布尔并集）",
+                       "tools":  [
+                                     {
+                                         "name":  "并集",
+                                         "command":  "BooleanUnion",
+                                         "tooltip":  "布尔并集 BooleanUnion"
+                                     },
+                                     {
+                                         "name":  "差集",
+                                         "command":  "BooleanDifference",
+                                         "tooltip":  "布尔差集 BooleanDifference"
+                                     },
+                                     {
+                                         "name":  "交集",
+                                         "command":  "BooleanIntersection",
+                                         "tooltip":  "布尔交集 BooleanIntersection"
+                                     },
+                                     {
+                                         "name":  "分割",
+                                         "command":  "BooleanSplit",
+                                         "tooltip":  "布尔分割 BooleanSplit"
+                                     },
+                                     {
+                                         "name":  "抽壳",
+                                         "command":  "Shell",
+                                         "tooltip":  "抽壳 Shell"
+                                     },
+                                     {
+                                         "name":  "圆角边",
+                                         "command":  "FilletEdge",
+                                         "tooltip":  "圆角边 FilletEdge"
+                                     }
+                                 ]
+                   },
+                   {
+                       "name":  "变动",
+                       "color":  "#E8C26CA8",
+                       "default_command":  "Move",
+                       "tooltip":  "变动（默认移动）",
+                       "tools":  [
+                                     {
+                                         "name":  "移动",
+                                         "command":  "Move",
+                                         "tooltip":  "移动 Move"
+                                     },
+                                     {
+                                         "name":  "旋转",
+                                         "command":  "Rotate",
+                                         "tooltip":  "旋转 Rotate"
+                                     },
+                                     {
+                                         "name":  "缩放",
+                                         "command":  "Scale",
+                                         "tooltip":  "缩放 Scale"
+                                     },
+                                     {
+                                         "name":  "镜像",
+                                         "command":  "Mirror",
+                                         "tooltip":  "镜像 Mirror"
+                                     },
+                                     {
+                                         "name":  "阵列",
+                                         "command":  "Array",
+                                         "tooltip":  "阵列 Array"
+                                     },
+                                     {
+                                         "name":  "对齐",
+                                         "command":  "Align",
+                                         "tooltip":  "对齐 Align"
+                                     }
+                                 ]
+                   }
+               ]
+}

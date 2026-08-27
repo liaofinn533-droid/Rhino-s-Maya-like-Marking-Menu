@@ -1,0 +1,159 @@
+{
+  "menu_size": 460,
+  "min_drag": 20,
+  "groups": [
+    {
+      "name": "布尔",
+      "color": "#E86496FA",
+      "default_command": "BooleanUnion",
+      "tooltip": "布尔运算（默认并集）",
+      "tools": [
+        {
+          "name": "差集",
+          "command": "BooleanDifference",
+          "tooltip": "布尔差集 BooleanDifference"
+        },
+        {
+          "name": "并集",
+          "command": "BooleanUnion",
+          "tooltip": "布尔并集 BooleanUnion"
+        },
+        {
+          "name": "交集",
+          "command": "BooleanIntersection",
+          "tooltip": "布尔交集 BooleanIntersection"
+        },
+        {
+          "name": "分割",
+          "command": "Split",
+          "tooltip": "分割 Split"
+        }
+      ]
+    },
+    {
+      "name": "曲面",
+      "color": "#E84AC26C",
+      "default_command": "BlendSrf",
+      "tooltip": "曲面（默认混接曲面）",
+      "tools": [
+        {
+          "name": "混接曲面",
+          "command": "BlendSrf",
+          "tooltip": "混接曲面 BlendSrf"
+        },
+        {
+          "name": "双轨扫掠",
+          "command": "Sweep2",
+          "tooltip": "双轨扫掠 Sweep2"
+        },
+        {
+          "name": "放样",
+          "command": "Loft",
+          "tooltip": "放样 Loft"
+        },
+        {
+          "name": "曲面偏移",
+          "command": "OffsetSrf",
+          "tooltip": "曲面偏移 OffsetSrf"
+        }
+      ]
+    },
+    {
+      "name": "圆角",
+      "color": "#E8F0A54A",
+      "default_command": "FilletEdge",
+      "tooltip": "圆角倒角（默认边缘圆角）",
+      "tools": [
+        {
+          "name": "边缘圆角",
+          "command": "FilletEdge",
+          "tooltip": "边缘圆角 FilletEdge"
+        },
+        {
+          "name": "边倒角",
+          "command": "ChamferEdge",
+          "tooltip": "边倒角 ChamferEdge"
+        }
+      ]
+    },
+    {
+      "name": "修剪",
+      "color": "#E8E06C6C",
+      "default_command": "Trim",
+      "tooltip": "修剪编辑（默认修剪）",
+      "tools": [
+        {
+          "name": "修剪",
+          "command": "Trim",
+          "tooltip": "修剪 Trim"
+        },
+        {
+          "name": "延伸",
+          "command": "Extend",
+          "tooltip": "延伸 Extend"
+        },
+        {
+          "name": "偏移",
+          "command": "Offset",
+          "tooltip": "偏移 Offset"
+        },
+        {
+          "name": "炸开",
+          "command": "Explode",
+          "tooltip": "炸开 Explode"
+        }
+      ]
+    },
+    {
+      "name": "结构",
+      "color": "#E8A06CD8",
+      "default_command": "ExtractIsocurve",
+      "tooltip": "结构线提取（默认抽离结构线）",
+      "tools": [
+        {
+          "name": "抽离结构线",
+          "command": "ExtractIsocurve",
+          "tooltip": "抽离结构线 ExtractIsocurve"
+        },
+        {
+          "name": "复制边缘",
+          "command": "DupEdge",
+          "tooltip": "复制边缘 DupEdge"
+        },
+        {
+          "name": "抽离曲面",
+          "command": "ExtractSrf",
+          "tooltip": "抽离曲面 ExtractSrf"
+        }
+      ]
+    },
+    {
+      "name": "编辑",
+      "color": "#E86CA8D8",
+      "default_command": "Move",
+      "tooltip": "基础编辑（默认移动）",
+      "tools": [
+        {
+          "name": "移动",
+          "command": "Move",
+          "tooltip": "移动 Move"
+        },
+        {
+          "name": "旋转",
+          "command": "Rotate",
+          "tooltip": "旋转 Rotate"
+        },
+        {
+          "name": "缩放",
+          "command": "Scale",
+          "tooltip": "缩放 Scale"
+        },
+        {
+          "name": "镜像",
+          "command": "Mirror",
+          "tooltip": "镜像 Mirror"
+        }
+      ]
+    }
+  ]
+}
